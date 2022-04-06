@@ -3,7 +3,7 @@
 /**
  * ch_free_grid - frees a 2d array
  * @grid: multidimensional array of char
- * @char: height of the array
+ * @height: height of the array
  *
  * Return: void.
  */
@@ -45,23 +45,23 @@ char **strtow(char *str)
 	{
 		for (c = a1; str[c] != '\0'; c++)
 		{
-			if (str[c] ==' ')
+			if (str[c] == ' ')
 				a1++;
 			if (str[c] != ' ' && ((str[c + 1] == ' ' || str[c + 1] == '\0')))
-					{
-					aout[i] = malloc((c - a1 +2) * sizeof(char));
-					if (aout[i] == NULL)
-					{
+			{
+			 aout[i] = malloc((c - a1 +2) * sizeof(char));
+				if (aout[i] == NULL)
+				{
 					ch_free_grid(aout, i);
 					return (NULL);
-					}
+				}
 					break;
-					}
-					}
-					for (j = 0; a1 <= c; a1++, j++)
-					aout[i][j] = str[a1];
-					aout[i][j] = '\0';
-					}
-					aout[i] = NULL;
-					return (aout);
-					}
+			}
+		}
+		for (j = 0; a1 <= c; a1++, j++)
+			aout[i][j] = str[a1];
+			aout[i][j] = '\0';
+	}
+	aout[i] = NULL;
+return (aout);
+}
