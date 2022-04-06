@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * ch_free_frid - frees a 2d array
+ * ch_free_grid - frees a 2d array
  * @grid: multidimensional array of char
  * @char: height of the array
  *
  * Return: void.
  */
-void ch_free_greid(char **grid, unsigned int height)
+void ch_free_grid(char **grid, unsigned int height)
 {
 	if (grid != NULL && height != 0)
 	{
