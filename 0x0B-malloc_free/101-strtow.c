@@ -69,12 +69,12 @@ void cpystr(char **s, char *str)
 char **strtow(char *str)
 {
 	char **s;
-	int wordno, i, j,k length, idx;
+	int wordno, i, j, k, length, idx;
 
 	if (str == NULL || str[0] == '\0')
 		return (0);
 	wordno = wordnos(str);
-	s = (char **)malloc(sizeof(char *0 * (wordno +1));
+	s = (char **)malloc(sizeof(char *) * (wordno + 1));
 	if (s == 0 || wordno == 0)
 	return (0);
 	i = 0;
@@ -106,5 +106,5 @@ char **strtow(char *str)
 	i++;
 	}
 	cpystr(s, str);
-	return (s);
+	return (s);;
 }
